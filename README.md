@@ -6,7 +6,7 @@ An OpenStack instance implemented the Gnocchi open-source time series database w
 - Consumer development using [DJango Web Framework](https://www.djangoproject.com/) that retrieved from Gnocchi REST API periodically some aggregated values like average, max, min, sum, std, count;  
 - Producer development with [Python](https://www.python.org/) that store on Gnocchi REST API random numbers for three different metrics: _Tempeture_, _Huminity_, _Wind Speed_
 
-## Gnocchi
+## Gnocchi Introduction
 
 Gnocchi is an open-source time series database.
 
@@ -49,3 +49,7 @@ On this web page you can see the three different metrics _Tempeture_, _Huminity_
 - Wind Speed Graph
 
 ![Wind Speed](documentation/img/Gnocchi-Graphical-WindSpeed.PNG)
+
+### Credits
+
+This project was developed by [@fxisco](https://github.com/fxisco), [@fabianaritorti](https://github.com/fabianaritorti), [@luigiarena](https://github.com/luigiarena), [@MarshaGomez](https://github.com/MarshaGomez)
