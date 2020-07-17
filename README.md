@@ -52,4 +52,4 @@ On this web page you can see the three different metrics _Tempeture_, _Huminity_
 
 ### Credits
 
-This project was developed by [@fxisco](https://github.com/fxisco), [@fabianaritorti](https://github.com/fabianaritorti), [@luigiarena](https://github.com/luigiarena), [@MarshaGomez](https://github.com/MarshaGomez)
+This project was developed by University of Pisa Students: [@fxisco](https://github.com/fxisco), [@fabianaritorti](https://github.com/fabianaritorti), [@luigiarena](https://github.com/luigiarena), [@MarshaGomez](https://github.com/MarshaGomez)
