@@ -29,3 +29,23 @@ You can read the full documentation online:
 - [Gnocchi official documentation](http://gnocchi.osci.io)
 - [Gnocchi installation](https://jaas.ai/gnocchi/37)
 - [Gnocchi REST interface](https://gnocchi.xyz/rest.html)
+
+### Application Screenshot
+
+- Index
+
+On this web page you can see the three different metrics _Tempeture_, _Huminity_, _Wind Speed_
+
+![Index](documentation/img/Gnocchi-index.PNG)
+
+- Tempeture Graph
+
+![Tempeture](documentation/img/Gnocchi-Graphical-Tempeture.PNG)
+
+- Huminity Graph
+
+![Huminity](documentation/img/Gnocchi-Graphical-Huminity.PNG)
+
+- Wind Speed Graph
+
+![Wind Speed](documentation/img/Gnocchi-Graphical-WindSpeed.PNG)
