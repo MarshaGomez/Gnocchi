@@ -1,0 +1,9 @@
+TODO
+
+- Fix the back button
+- Test on how we are going the present
+
+
+git config --global user.email "l.arena6@studenti.unipi.it"
+git config --global user.name "Luigi Arena"
+
