@@ -34,7 +34,7 @@ You can read the full documentation online:
 
 - Index
 
-On this web page you can see the three different metrics _Tempeture_, _Huminity_, _Wind Speed_
+On this web page you can see the three different metrics _Tempeture_ with policy _medium_, _Huminity_ with policy _high_, _Wind Speed_ with policy _low_
 
 ![Index](documentation/img/Gnocchi-index.PNG)
 
@@ -49,6 +49,14 @@ On this web page you can see the three different metrics _Tempeture_, _Huminity_
 - Wind Speed Graph
 
 ![Wind Speed](documentation/img/Gnocchi-Graphical-WindSpeed.PNG)
+
+### How run the application
+#### Producer.py
+
+* Example run command:
+```ssh
+python producer.py --min 10 --max 100 --date 2020-06-11T13:32:51 --id ca3ac69a-67d0-4bd4-bd8b-22debdab0fb3 --sec 15
+```
 
 ### Credits
 
