@@ -50,6 +50,14 @@ On this web page you can see the three different metrics _Tempeture_ with policy
 
 ![Wind Speed](documentation/img/Gnocchi-Graphical-WindSpeed.PNG)
 
+### How run the application
+#### Producer.py
+
+* Example run command:
+```ssh
+python producer.py --min 10 --max 100 --date 2020-06-11T13:32:51 --id ca3ac69a-67d0-4bd4-bd8b-22debdab0fb3 --sec 15
+```
+
 ### Credits
 
 This project was developed by University of Pisa Students: [@fxisco](https://github.com/fxisco), [@fabianaritorti](https://github.com/fabianaritorti), [@luigiarena](https://github.com/luigiarena), [@MarshaGomez](https://github.com/MarshaGomez)
