@@ -34,7 +34,7 @@ You can read the full documentation online:
 
 - Index
 
-On this web page you can see the three different metrics _Tempeture_, _Huminity_, _Wind Speed_
+On this web page you can see the three different metrics _Tempeture_ with policy _medium_, _Huminity_ with policy _high_, _Wind Speed_ with policy _low_
 
 ![Index](documentation/img/Gnocchi-index.PNG)
 
