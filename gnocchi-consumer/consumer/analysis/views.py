@@ -37,7 +37,7 @@ def index(request):
 
     # if successful, print response
     return render(request, 'metrics.html', { "metrics": metrics })
-
+# get a post request when we push the update button
 def detail(request, id, definition = 0, aggregation = 'mean'):
   if request.method == 'POST':
     form = MetricsForm(request.POST)
