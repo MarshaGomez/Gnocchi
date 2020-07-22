@@ -1,9 +1,11 @@
+# Framework DJango easy and friendly web development
 from django.shortcuts import render, redirect
 from . import helpers
 from .forms import MetricsForm
 from datetime import date, datetime
 import json
 
+# Gnocchi URL API REST
 global_url = "http://252.3.36.203:8041/v1/metric/"
 
 def getSession(request):
@@ -21,10 +23,9 @@ def getSession(request):
 
 
 def index(request):
-
     sess = getSession(request)
 
-    # Do the request, this returns TEXT
+    # Get Data from Gnocchi REST API (returns TEXT)
     response = sess.get(global_url)
 
     # Parse the TEXT response to JSON
@@ -45,26 +46,22 @@ def detail(request, id, definition = 0, aggregation = 'mean'):
       definition = form.cleaned_data.get('definition')
       aggregation = form.cleaned_data.get('aggregation')
 
-
       return redirect(detail, id, definition, aggregation)
-
 
   sess = getSession(request)
 
-  # Do the request, this returns TEXT (REST GET)
+  # Do the request, this returns a JSON from TEXT (REST GET) /for the metric
   response = sess.get(global_url + id)
-
+  
   metric = json.loads(response.text)
 
   # Check errors in response
   if "error" in metric:
     return render(request, 'error_page.html', { "error": metric["error"]["message"] })
 
-
-
-  # Do the request, this returns TEXT (REST GET METHOD)
+  # Do the request, this returns TEXT (REST GET METHOD) / for the aggregation
   response_values = sess.get(global_url + id + "/measures?aggregation=" + aggregation)
-
+  # Convert the format text of the web page in JSON
   values = json.loads(response_values.text)
 
   # Check errors in response

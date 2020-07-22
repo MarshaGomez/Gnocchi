@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # Get the Analysus Urls in our case we can see the metrics on the next URL: http://172.16.3.36:8000/metrics/
     path('metrics/', include('analysis.urls')),
     path('admin/', admin.site.urls),
 ]
