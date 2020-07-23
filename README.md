@@ -56,6 +56,10 @@ You can read the full documentation online:
 - [Gnocchi installation](https://jaas.ai/gnocchi/37)
 - [Gnocchi REST interface](https://gnocchi.xyz/rest.html)
 
+Architecture Gnocchi with this solution:
+
+![Index](documentation/img/Gnocchi.png)
+
 ### Application Screenshot
 
 - Index
