@@ -30,6 +30,31 @@ Because Gnocchi computes all the aggregations at ingestion, getting the data bac
 * **Time series**: A list of aggregates ordered by time.
 * **Timespan**: The time period for which a metric keeps its aggregates. It is used in the context of archive policy.
 
+### Default archive policies
+
+By default, 4 archive policies are created when calling gnocchi-upgrade: bool, low, medium and high. The name both describes the storage space and CPU usage needs.
+
+* **low**
+  * 5 minutes granularity over 30 days
+  * aggregation methods used: default_aggregation_methods
+  * maximum estimated size per metric: 406 KiB
+* **medium** 
+  * 1 minute granularity over 7 days
+  * 1 hour granularity over 365 days
+  * aggregation methods used: default_aggregation_methods
+  * maximum estimated size per metric: 887 KiB
+* **high**
+  * 1 second granularity over 1 hour
+  * 1 minute granularity over 1 week
+  * 1 hour granularity over 1 year
+  * aggregation methods used: default_aggregation_methods
+  * maximum estimated size per metric: 1 057 KiB
+* **bool**
+  * 1 second granularity over 1 year
+  * aggregation methods used: last
+  * maximum optimistic size per metric: 1 539 KiB
+  * maximum pessimistic size per metric: 277 172 KiB
+
 ### Comparisons To Alternatives
 
 Features	                    |Gnocchi	    |Prometheus	|InfluxDB	        |OpenTSDB	|Graphite|
