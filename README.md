@@ -30,6 +30,20 @@ Because Gnocchi computes all the aggregations at ingestion, getting the data bac
 * **Time series**: A list of aggregates ordered by time.
 * **Timespan**: The time period for which a metric keeps its aggregates. It is used in the context of archive policy.
 
+### Comparisons To Alternatives
+
+Features	                    |Gnocchi	    |Prometheus	|InfluxDB	        |OpenTSDB	|Graphite|
+|---|---|---|---|---|---|           
+|Metric polling	              |No	          |Yes        |No	                |No	    |No|
+|Resource history	            |Yes	        |No	        |No	                |No	    |No|
+|Multi-tenant	                |Yes	        |No	        |No	                |No	    |No|
+|Query interface	            |REST API	    |REST API	  |HTTP	              | TCP	  |None|
+|High-available	              |Yes	        |No	        |With Relay	        |Yes	  |No|
+|Scalable	                    |Yes	        |No	        |Commercial only	  |Yes	  |No|
+|Alerting	                    |No (roadmap)	|Yes	      |With Kapacitor	    |No	    |No|
+|Grafana support	            |Yes	        |Yes        |Yes                |Yes	  |Yes|
+|collectd support	            |Yes	        |Yes        |Yes                |Yes	  |Yes|
+
 ## Poject Specifications
 
 ### OpenStack: Timeseries as a service
