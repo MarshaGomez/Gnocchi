@@ -18,6 +18,32 @@ Gnocchi takes a unique approach to time series storage: rather than storing raw 
 
 Because Gnocchi computes all the aggregations at ingestion, getting the data back is extremely fast, as it just needs to read back the pre-computed results.
 
+### Glosary 
+
+* **Aggregate**: A datapoint tuple generated from several measures according to the archive policy definition. It is composed of a timestamp and a value.
+* **Aggregation method**: Function used to aggregate multiple measures into an aggregate. For example, the min aggregation method will aggregate the values of different measures to the minimum value of all the measures in the time range.
+* **Archive policy**: An aggregate storage policy attached to a metric. It determines how long aggregates will be kept in a metric and how they will be aggregated.
+* **Granularity**: The time between two aggregates in an aggregated time series of a metric.
+* **Measure**: An incoming datapoint tuple sent to Gnocchi by the api. It is composed of a timestamp and a value.
+* **Metric**: An entity storing aggregates identified by an UUID. It can be attached to a resource using a name. How a metric stores its aggregates is defined by the archive policy it is associated to.
+* **Resource**: An entity representing anything in your infrastructure that you will associate metric(s) with. It is identified by a unique ID and can contain attributes.
+* **Time series**: A list of aggregates ordered by time.
+* **Timespan**: The time period for which a metric keeps its aggregates. It is used in the context of archive policy.
+
+### Comparisons To Alternatives
+
+Features	                    |Gnocchi	    |Prometheus	|InfluxDB	        |OpenTSDB	|Graphite|
+|---|---|---|---|---|---|           
+|Metric polling	              |No	          |Yes        |No	                |No	    |No|
+|Resource history	            |Yes	        |No	        |No	                |No	    |No|
+|Multi-tenant	                |Yes	        |No	        |No	                |No	    |No|
+|Query interface	            |REST API	    |REST API	  |HTTP	              | TCP	  |None|
+|High-available	              |Yes	        |No	        |With Relay	        |Yes	  |No|
+|Scalable	                    |Yes	        |No	        |Commercial only	  |Yes	  |No|
+|Alerting	                    |No (roadmap)	|Yes	      |With Kapacitor	    |No	    |No|
+|Grafana support	            |Yes	        |Yes        |Yes                |Yes	  |Yes|
+|collectd support	            |Yes	        |Yes        |Yes                |Yes	  |Yes|
+
 ## Poject Specifications
 
 ### OpenStack: Timeseries as a service
@@ -29,6 +55,10 @@ You can read the full documentation online:
 - [Gnocchi official documentation](http://gnocchi.osci.io)
 - [Gnocchi installation](https://jaas.ai/gnocchi/37)
 - [Gnocchi REST interface](https://gnocchi.xyz/rest.html)
+
+Architecture Gnocchi with this solution:
+
+![Index](documentation/img/Gnocchi.png)
 
 ### Application Screenshot
 
