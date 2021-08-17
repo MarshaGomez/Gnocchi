@@ -1,6 +1,8 @@
 
 # Cloud Computing
 
+[![CodeFactor](https://www.codefactor.io/repository/github/marshagomez/gnocchi/badge)](https://www.codefactor.io/repository/github/marshagomez/gnocchi)
+
 An OpenStack instance implemented the Gnocchi open-source time series database with Ceph. Two types of applications were developed in this repository.
 
 - Consumer development using [DJango Web Framework](https://www.djangoproject.com/) that retrieved from Gnocchi REST API periodically some aggregated values like average, max, min, sum, std, count;  
