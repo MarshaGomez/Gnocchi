@@ -117,4 +117,12 @@ python producer.py --min 10 --max 100 --date 2020-06-11T13:32:51 --id ca3ac69a-6
 
 ### Credits
 
-This project was developed by University of Pisa Students: [@fxisco](https://github.com/fxisco), [@fabianaritorti](https://github.com/fabianaritorti), [@luigiarena](https://github.com/luigiarena), [@MarshaGomez](https://github.com/MarshaGomez)
+This project was developed by University of Pisa Students: 
+
+Name  | Github User
+------------- | -------------
+Francisco Payes  | [fxisco](https://github.com/fxisco)
+Fabiana Ritorti | [fabianaritorti](https://github.com/fabianaritorti)
+Luigi Arena | [luigiarena](https://github.com/luigiarena)
+Marsha Gómez Gómez | [MarshaGomez](https://github.com/MarshaGomez)
+
